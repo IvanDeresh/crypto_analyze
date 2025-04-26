@@ -13,10 +13,16 @@ const TheHeader = () => {
       </div>
       <ul className="flex justify-between w-4/10">
         <li>
+          <Link to="/stats">Stats</Link>
+        </li>
+        <li>
+          <Link to="/connect">Connect</Link>
+        </li>
+        <li>
           <Link to="/about">About</Link>
         </li>
         <li>
-          <Link to="/stats">Stats</Link>
+          <Link to="/news">News</Link>
         </li>
       </ul>
       <div className="flex justify-center w-3/10">

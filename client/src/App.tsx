@@ -10,6 +10,7 @@ import Profile from "./pages/Profile";
 import Connect from "./pages/Connect";
 import ProtectedRoute from "./utils/helpers/protectRoute";
 import { AuthProvider } from "./context/AuthContext";
+import News from "./pages/News";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
                 }
               />
               <Route path="/connect" element={<Connect />} />
+              <Route path="/news" element={<News />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>
