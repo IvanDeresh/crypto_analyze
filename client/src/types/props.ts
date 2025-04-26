@@ -1,10 +1,13 @@
+import { MouseEventHandler } from "react";
+
 export type LayoutProps = {
   children: React.ReactNode;
 };
 
 export type ButtonProps = {
   label: string;
-  type?: "submit" | "reset" | "button" | undefined;
+  type?: "submit" | "reset" | "button";
+  onClick?: MouseEventHandler<HTMLButtonElement>;
   styles: string;
 };
 
