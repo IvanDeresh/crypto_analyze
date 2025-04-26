@@ -51,3 +51,22 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-infinite-scroll {
+  display: flex;
+  gap: 20px;
+  animation: infiniteScroll 20s linear infinite;
+}
+
+.overflow-hidden:hover .animate-infinite-scroll {
+  animation-play-state: paused;
+}
