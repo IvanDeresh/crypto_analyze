@@ -1,9 +1,10 @@
 import { ButtonProps } from "../../types/props";
 
-const Button = ({ label, styles, type = "button" }: ButtonProps) => {
+const Button = ({ onClick, label, styles, type = "button" }: ButtonProps) => {
   return (
     <button
       type={type}
+      onClick={onClick}
       className={`${styles} flex cursor-pointer justify-center items-center`}
     >
       {label}
