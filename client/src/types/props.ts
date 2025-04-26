@@ -4,6 +4,7 @@ export type LayoutProps = {
 
 export type ButtonProps = {
   label: string;
+  type?: "submit" | "reset" | "button" | undefined;
   styles: string;
 };
 

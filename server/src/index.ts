@@ -6,12 +6,19 @@ import feedbackRoutes from "./routes/feedbackRoutes";
 import authRoutes from "./routes/authRoutes";
 import portfolioRoutes from "./routes/portfolioRoutes";
 import userRoutes from "./routes/userRoutes";
+import cookieParser from "cookie-parser";
 
 dotenv.config({ path: ".env.local" });
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+  })
+);
+app.use(cookieParser());
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
