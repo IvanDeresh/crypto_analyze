@@ -1,4 +1,9 @@
+@import "tailwindcss";
+
 :root {
+  max-width: 90rem;
+  margin: 0 auto;
+
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -15,24 +20,7 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
   text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
 }
 
 button {
@@ -45,9 +33,6 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
@@ -65,4 +50,23 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-infinite-scroll {
+  display: flex;
+  gap: 20px;
+  animation: infiniteScroll 20s linear infinite;
+}
+
+.overflow-hidden:hover .animate-infinite-scroll {
+  animation-play-state: paused;
 }
