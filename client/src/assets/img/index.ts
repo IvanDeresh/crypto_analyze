@@ -1,3 +1,3 @@
 import logo from "./logo.png";
-
-export { logo };
+import cube_center from "./_14946735.png";
+export { logo, cube_center };

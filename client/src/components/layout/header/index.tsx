@@ -19,8 +19,8 @@ const TheHeader = () => {
       </ul>
       <div className="flex justify-center w-3/10 ">
         <Link
-          className="w-36 flex justify-center items-center h-10 rounded-md text-white font-bold bg-[#111111]"
-          to="sign-in"
+          className="w-36 flex justify-center items-center h-10 rounded-md hover:text-[#535bf2] transition-all duration-200 hover:bg-[#1f1f1f] active:scale-95 hover:scale-105 text-white font-bold bg-[#646cff]"
+          to="/sign-in"
         >
           Sign in
         </Link>

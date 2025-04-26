@@ -14,13 +14,11 @@ const TheFooter: React.FC = () => {
             Dive into the neon world of crypto analytics.
           </p>
         </div>
-
-        {/* Швидкі посилання */}
         <div>
           <h4 className="text-lg font-semibold text-gray-200 mb-2">
             Quick Links
           </h4>
-          <ul className="space-y-1 text-gray-400">
+          <ul className="space-y-1 text-[#535bf2] ">
             <li>
               <a href="/" className="hover:text-cyan-400 transition-colors">
                 Home
@@ -50,29 +48,28 @@ const TheFooter: React.FC = () => {
           </ul>
         </div>
 
-        {/* Соціальні іконки */}
         <div>
           <h4 className="text-lg font-semibold text-gray-200 mb-2">
             Follow Us
           </h4>
-          <div className="flex space-x-4">
+          <div className="flex space-x-4 text-[#535bf2]">
             <a
               href="https://twitter.com"
-              className="text-gray-400 hover:text-cyan-400 transition-colors"
+              className=" hover:text-cyan-400 text-[#535bf2] transition-colors"
               aria-label="Twitter"
             >
               <Twitter className="w-6 h-6 drop-shadow-lg" />
             </a>
             <a
               href="https://instagram.com"
-              className="text-gray-400 hover:text-cyan-400 transition-colors"
+              className="text-[#535bf2] hover:text-cyan-400 transition-colors"
               aria-label="Instagram"
             >
               <Instagram className="w-6 h-6 drop-shadow-lg" />
             </a>
             <a
               href="https://github.com"
-              className="text-gray-400 hover:text-cyan-400 transition-colors"
+              className="text-[#535bf2] hover:text-cyan-400 transition-colors"
               aria-label="GitHub"
             >
               <Github className="w-6 h-6 drop-shadow-lg" />
