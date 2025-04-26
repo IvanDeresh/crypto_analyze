@@ -1,12 +1,6 @@
 import mongoose, { Document, Schema } from "mongoose";
-import { IPortfolio, PortfolioSchema } from "./Portfolio";
-
-export interface IUser extends Document {
-  name: string;
-  email: string;
-  password: string;
-  portfolios: IPortfolio[];
-}
+import { PortfolioSchema } from "./Portfolio";
+import { IUser } from "../types";
 
 const UserSchema: Schema = new Schema<IUser>(
   {
