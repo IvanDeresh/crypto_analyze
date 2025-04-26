@@ -14,7 +14,7 @@ const SignIn = () => {
     try {
       const data = await login(email, password);
       console.log("Logged in user:", data);
-      navigate("/");
+      navigate("/profile");
     } catch (error: any) {
       console.error(error.message);
       setError(error.message || "Failed to login");

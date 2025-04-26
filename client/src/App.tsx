@@ -8,25 +8,36 @@ import SignIn from "./pages/Auth/SignIn";
 import NotFound from "./pages/NotFound";
 import Profile from "./pages/Profile";
 import Connect from "./pages/Connect";
+import ProtectedRoute from "./utils/helpers/protectRoute";
+import { AuthProvider } from "./context/AuthContext";
 
 function App() {
   return (
-    <div className="w-full">
-      <Router>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/stats" element={<Stats />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/sign-in" element={<SignIn />} />
-            <Route path="/sign-up" element={<SignUp />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/connect" element={<Connect />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Layout>
-      </Router>
-    </div>
+    <AuthProvider>
+      <div className="w-full">
+        <Router>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/stats" element={<Stats />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/sign-in" element={<SignIn />} />
+              <Route path="/sign-up" element={<SignUp />} />
+              <Route
+                path="/profile"
+                element={
+                  <ProtectedRoute>
+                    <Profile />
+                  </ProtectedRoute>
+                }
+              />
+              <Route path="/connect" element={<Connect />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Layout>
+        </Router>
+      </div>
+    </AuthProvider>
   );
 }
 
