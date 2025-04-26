@@ -1,8 +1,11 @@
 import { ButtonProps } from "../../types/props";
 
-const Button = ({ label, styles }: ButtonProps) => {
+const Button = ({ label, styles, type = "button" }: ButtonProps) => {
   return (
-    <button className={`${styles} flex justify-center items-center`}>
+    <button
+      type={type}
+      className={`${styles} flex cursor-pointer justify-center items-center`}
+    >
       {label}
     </button>
   );

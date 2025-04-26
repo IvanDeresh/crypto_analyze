@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import SignUp from "./pages/Auth/SignUp";
 import SignIn from "./pages/Auth/SignIn";
 import NotFound from "./pages/NotFound";
+import Profile from "./pages/Profile";
+import Connect from "./pages/Connect";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/sign-in" element={<SignIn />} />
             <Route path="/sign-up" element={<SignUp />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/connect" element={<Connect />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
