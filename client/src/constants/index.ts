@@ -1,4 +1,10 @@
-import { IFeedBack, IOurProducts } from "../types/constants";
+import { bitcoin_news, economic_abacus, global, gold } from "../assets/img";
+import {
+  ConnectOption,
+  IFeedBack,
+  IOurProducts,
+  NewsItem,
+} from "../types/constants";
 
 export const products: IOurProducts[] = [
   { id: 1, name: "Bitcoin", category: "Crypto", icon: "fab fa-btc" },
@@ -61,5 +67,68 @@ export const feedbacks: IFeedBack[] = [
     userName: "Emily Johnson",
     rating: 3,
     text: "The product is decent, but it didn't meet all of my expectations. Could be better.",
+  },
+];
+
+export const connectOptions: ConnectOption[] = [
+  {
+    title: "Connect via API",
+    description:
+      "Securely link your investment accounts like Binance, Coinbase, or Robinhood using API keys.",
+    actionText: "Connect API",
+    method: "api",
+  },
+  {
+    title: "Upload CSV",
+    description:
+      "Import your portfolio easily by uploading a CSV file exported from your broker or exchange.",
+    actionText: "Upload CSV",
+    method: "csv",
+  },
+  {
+    title: "Add Manually",
+    description:
+      "Manually input your assets to track and analyze your custom portfolio.",
+    actionText: "Add Assets",
+    method: "manual",
+  },
+];
+
+export const newsData: NewsItem[] = [
+  {
+    id: 1,
+    title: "Stock Market Hits New Highs",
+    description:
+      "The stock market has seen significant growth recently, with major indices reaching all-time highs.",
+    date: "2025-04-27",
+    category: "stocks",
+    image: economic_abacus,
+  },
+  {
+    id: 2,
+    title: "Bitcoin Reaches $100,000",
+    description:
+      "Bitcoin continues its upward trend, hitting a new milestone of $100,000 per coin.",
+    date: "2025-04-25",
+    category: "cryptocurrency",
+    image: bitcoin_news,
+  },
+  {
+    id: 3,
+    title: "Gold Prices Surge Amid Inflation Concerns",
+    description:
+      "Investors are turning to gold as a safe haven as inflation worries rise globally.",
+    date: "2025-04-23",
+    category: "precious metals",
+    image: gold,
+  },
+  {
+    id: 4,
+    title: "Global Economic Outlook for 2025",
+    description:
+      "A detailed analysis of the global economy and expected trends in various asset classes for the year.",
+    date: "2025-04-22",
+    category: "general",
+    image: global,
   },
 ];
