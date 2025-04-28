@@ -11,6 +11,7 @@ import Connect from "./pages/Connect";
 import ProtectedRoute from "./utils/helpers/protectRoute";
 import { AuthProvider } from "./context/AuthContext";
 import News from "./pages/News";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
               />
               <Route path="/connect" element={<Connect />} />
               <Route path="/news" element={<News />} />
+              <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>

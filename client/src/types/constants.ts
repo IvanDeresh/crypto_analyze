@@ -11,3 +11,19 @@ export interface IFeedBack {
   rating: number;
   text: string;
 }
+
+export interface ConnectOption {
+  title: string;
+  description: string;
+  actionText: string;
+  method: "api" | "csv" | "manual";
+}
+
+export interface NewsItem {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+  category: "stocks" | "cryptocurrency" | "precious metals" | "general";
+  image: string;
+}
