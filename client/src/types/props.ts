@@ -18,3 +18,19 @@ export type FeedBackItemProps = {
 };
 
 export type OurProductsProps = { name: string; icon: string; category: string };
+
+export interface Portfolio {
+  platform: string;
+  accountName: string;
+  credentials: Record<string, string | number>;
+  connectedAt: string;
+}
+export interface User {
+  _id: string;
+  name: string;
+  email: string;
+  portfolios: Portfolio[];
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
+}

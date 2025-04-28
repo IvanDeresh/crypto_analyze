@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { connectOptions } from "../../constants";
 import { connectPortfolio } from "../../utils/api/portfolio";
-import { useAuth } from "../../context/AuthContext"; // для доступу до userId
+import { useAuth } from "../../context/AuthContext";
 
 type ConnectMethod = "api" | "csv" | "manual";
 
@@ -13,8 +13,8 @@ const Connect = () => {
   const [apiSecret, setApiSecret] = useState("");
 
   const [assetName, setAssetName] = useState("");
-  const [quantity, setQuantity] = useState<number>(0);
-  const [purchasePrice, setPurchasePrice] = useState<number>(0);
+  const [quantity, setQuantity] = useState<number>();
+  const [purchasePrice, setPurchasePrice] = useState<number>();
 
   const [csvFile, setCsvFile] = useState<File | null>(null);
 
@@ -165,17 +165,21 @@ const Connect = () => {
             className="w-full p-2 rounded mb-4"
           />
           <input
-            type="number"
             placeholder="Quantity"
             value={quantity}
-            onChange={(e) => setQuantity(Number(e.target.value))}
+            onChange={(e) => {
+              const value = e.target.value;
+              setQuantity(value === "" ? undefined : Number(value));
+            }}
             className="w-full p-2 rounded mb-4"
           />
           <input
-            type="number"
             placeholder="Purchase Price"
             value={purchasePrice}
-            onChange={(e) => setPurchasePrice(Number(e.target.value))}
+            onChange={(e) => {
+              const value = e.target.value;
+              setPurchasePrice(value === "" ? undefined : Number(value));
+            }}
             className="w-full p-2 rounded mb-4"
           />
           <button
